@@ -1,3 +1,16 @@
+window.addEventListener("load", function () {
+  const loader = document.querySelector(".loader");
+  const content = document.querySelector(".content");
+
+  // Добавляем класс для плавного исчезновения загрузчика
+  loader.classList.add("fade-out");
+
+  setTimeout(() => {
+    loader.style.display = "none"; // Полностью скрываем элемент
+    content.classList.add("visible"); // Показываем контент с анимацией
+  }, 600); // Даем время для анимации
+});
+
 const btnDarkMode = document.querySelector(".dark-mode-btn");
 
 // 1. Проверка темной темы на уровне системных настроек
