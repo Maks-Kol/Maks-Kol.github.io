@@ -17,7 +17,8 @@
 	position: absolute;
 	/* bottom: 279px; */
 	top: 12760px;
-	left: 370px;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .questions-wrapper {
@@ -38,7 +39,7 @@
 }
 
 .faq {
-	width: 1200px;
+	width: 1660px;
 	padding-top: 22px;
 	padding-bottom: 6px;
 	border-bottom: 1px solid #000000;
@@ -129,30 +130,6 @@ svg {
 	line-height: var(--h3-medium-large-line-height);
 	font-style: var(--h3-medium-large-font-style);
 }
-
-/* .FULL-HD .questions {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	position: relative;
-	align-self: stretch;
-	width: 100%;
-	flex: 0 0 auto;
-} */
-
-/* .FULL-HD .frame {
-	display: flex;
-	align-items: center;
-	gap: 16px;
-	padding: 0px 0px 24px;
-	position: relative;
-	align-self: stretch;
-	width: 100%;
-	flex: 0 0 auto;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-color: #d4d4d4;
-} */
 
 .FULL-HD .text-wrapper-2 {
 	position: relative;
@@ -365,7 +342,6 @@ svg {
 }
 
 .FULL-HD .div-3 {
-	display: flex;
 	flex-direction: column;
 	width: 1920px;
 	align-items: center;
@@ -379,10 +355,10 @@ svg {
 .FULL-HD .h {
 	position: relative;
 	align-self: stretch;
-	margin-top: -1px;
+	margin-bottom: 60px;
 	font-family: var(--h3-medium-large-font-family);
 	font-weight: var(--h3-medium-large-font-weight);
-	color: #101010;
+	color: var(--black);
 	font-size: var(--h3-medium-large-font-size);
 	text-align: center;
 	letter-spacing: var(--h3-medium-large-letter-spacing);
@@ -731,7 +707,10 @@ svg {
 	gap: 10px;
 	position: relative;
 	flex: 0 0 auto;
+	opacity: 1;
 }
+
+
 
 .FULL-HD .flexcontainer {
 	display: flex;
@@ -747,15 +726,6 @@ svg {
 	font-family: "SF Pro Display-Light", Helvetica;
 	font-weight: 300;
 	color: var(--black);
-	font-size: 20px;
-	letter-spacing: 0;
-	line-height: 30px;
-}
-
-.FULL-HD .span {
-	font-family: "SF Pro Display-Light", Helvetica;
-	font-weight: 300;
-	color: #101010;
 	font-size: 20px;
 	letter-spacing: 0;
 	line-height: 30px;
@@ -898,6 +868,40 @@ svg {
 	position: relative;
 	width: 1920px;
 	height: 397px;
+}
+
+.autoslider {
+	width: 100%;
+	overflow: hidden;
+}
+
+.autoslider-track {
+	display: flex;
+	width: calc(200%);
+	gap: 20px;
+	/* потому что дублируем 10 картинок */
+	animation: scroll 180s linear infinite;
+	width: max-content;
+}
+
+.autoslider-track img {
+	height: auto;
+	flex-shrink: 0;
+	width: 397px;
+	height: 397px;
+	object-fit: cover;
+	border-radius: 10px;
+
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-50%);
+	}
 }
 
 .FULL-HD .view-6 {
@@ -2279,4 +2283,108 @@ svg {
 	line-height: var(--btn-16-line-height);
 	white-space: nowrap;
 	font-style: var(--btn-16-font-style);
+}
+
+.FULL-HD .slider-container {
+	position: relative;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.FULL-HD .swiper-wrapper {
+	align-items: center;
+}
+
+/* Слайды — неактивные затемняем и блюрим */
+.FULL-HD .swiper-slide {
+	opacity: 0.3;
+	filter: blur(2px);
+	transform: scale(0.9);
+	transition: all 0.3s ease;
+	pointer-events: none;
+}
+
+/* Активный слайд — четкий */
+.FULL-HD .swiper-slide-active {
+	opacity: 1;
+	filter: none;
+	transform: scale(1);
+	pointer-events: auto;
+}
+
+.FULL-HD .swiper-slide-prev {
+	margin-left: -43px;
+}
+
+/* Изображения */
+.FULL-HD .swiper-slide img {
+	max-width: 604px;
+	max-height: 604px;
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+/* Стрелки — поверх слайдера, по краям */
+.FULL-HD .swiper-button-prev,
+.FULL-HD .swiper-button-next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	border-radius: 50%;
+	border: 2px solid #7ea165;
+	color: #7ea165;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	opacity: 1;
+	/* убрать размытие */
+	filter: none !important;
+	/* защита от наследуемого blur */
+}
+
+/* Лево и право */
+.FULL-HD .swiper-button-prev {
+	left: 594px;
+}
+
+.FULL-HD .swiper-button-prev::after,
+.FULL-HD .swiper-button-next::after {
+	font-size: 18px;
+}
+
+.FULL-HD .swiper-button-next {
+	right: 587px;
+}
+
+.FULL-HD .swiper-pagination {
+	position: relative;
+	margin-top: 32px;
+}
+
+.FULL-HD .swiper-horizontal>.swiper-pagination-bullets {
+	left: 5px;
+}
+
+.btn-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.FULL-HD .btn-green {
+	margin-top: 60px;
+	background-color: #7ea165;
+	color: var(--black);
+	font-family: var(--font-family);
+	font-weight: 700;
+	padding: 24px 77px;
+	font-size: 20px;
+	line-height: 130%;
+	border: none;
+	border-radius: 34px;
+	cursor: pointer;
 }

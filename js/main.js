@@ -10,6 +10,31 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 300); // Задержка 1 секунда для анимации
 });
 
+// Swiper slider
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  centeredSlides: true,
+  loop: true,
+  initialSlide: 1, // 👉 второй слайд (0 — первый, 1 — второй и т.д.)
+  spaceBetween: 200,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  },
+});
+
 // Секция вопросы и ответы
 const faqs = document.querySelectorAll(".faq");
 
