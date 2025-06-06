@@ -1,0 +1,96 @@
+
+
+.header {
+  background-color: var(--accent-active);
+  background-image: linear-gradient(to bottom, rgb(45, 47, 51) 0%, rgba(80, 80, 80, 0.4) 10%),  url('./../img/header/header-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0 auto;
+  background-position: center 60px;
+
+  border-image: fill 0 linear-gradient(#0005, #0005);
+}
+
+.header__content {
+  color: var(--white-text-color);
+  text-align: center;
+}
+
+.header__title {
+  padding-top: 34vh;
+  font-size: 90px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent)
+}
+
+.header__subtitle {
+  font-size: 90px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.header__descr {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 31px;
+  max-width: 965px;
+  margin: 32px auto 0;
+}
+
+.price-courses {
+  font-size: 22px;
+  margin-top: 90px;
+  font-weight: 600;
+}
+
+.price-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 16px;
+}
+
+.price-btn-get {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: var(--accent);
+  border-radius: 7px;
+  width: 345px;
+  height: 50px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: var(--accent-active);
+  }
+}
+
+.price-btn-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent-bright);
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 7px;
+  border: 2px solid;
+  width: 250px;
+  height: 50px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  transition: background-color 0.2s ease-in-out;
+  &:hover {
+    color: var(--accent-active);
+    background-color: var(--white-text-color);
+    border-color: var(--accent-bright);
+  }
+}
+
+
+
