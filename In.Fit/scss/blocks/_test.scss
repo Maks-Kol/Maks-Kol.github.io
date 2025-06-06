@@ -1,0 +1,103 @@
+.test {
+  position: relative;
+  height: 330px;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to bottom, rgba(80, 80, 80, 0.4)), url('./../img/background/test-bg.jpg');
+  background-attachment: fixed; /* Работает на десктопах */
+  background-size: cover;
+  background-position: 40% center;
+  background-repeat: no-repeat;
+  height: 330px;
+  display: flex;
+  align-items: center;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .test {
+    background-attachment: scroll; /* Альтернатива для Safari */
+  }
+}
+
+.test::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./../img/background/test-bg.jpg') no-repeat center / cover;
+  z-index: -1;
+}
+
+.test-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.test-btn__wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding-right: 0;
+  margin-right: 0;
+  margin-bottom: 15px;
+}
+
+.test-title {
+  font-size: 45px;
+  line-height: 70px;
+  font-weight: 500;
+  color: var(--white-text-color);
+}
+
+.test-descr {
+  display: inline-block;
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 300;
+  color: var(--white-text-color);
+  span {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.test-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: var(--accent);
+  border-radius: 7px;
+  width: 345px;
+  height: 50px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: var(--accent-active);
+  }
+}
+
+.tariff-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  color: var(--accent-bright);
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 7px;
+  border: 2px solid;
+  width: 250px;
+  height: 50px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  transition: background-color 0.2s ease-in-out;
+  &:hover {
+    background-color: var(--accent-active);
+    border: none;
+  }
+}

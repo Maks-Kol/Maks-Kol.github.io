@@ -1,0 +1,460 @@
+
+@media (max-width: 1900px) {
+  .invisible {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1660px) {
+  .invisible {
+    display: none;
+  }
+}
+
+@media (max-width: 1530px) {
+  .test {
+    height: 470px;
+  }
+  .test-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .test-btn__wrapper {
+    padding-top: 40px;
+    width: 75vw;
+  }
+  .test-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+  .tariff-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .trainer__image::before {
+    right: 52%;
+  }
+}
+
+
+@media (max-width: 1310px) {
+  .header .header__nav {
+    a {
+      display: none;
+    }
+    .logo {
+      display: block;
+    }
+    .burger {
+      display: flex;
+    }
+    .nav {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      justify-content: center;
+      align-items: center;
+      z-index: 50;
+      overflow-y: auto;
+      padding: 50px 10px;
+      background-color: var(--grey-bg);
+      animation: burgerAnimation 0.4s;
+      ul {
+        color: var(--white-text-color);
+        flex-direction: column;
+        row-gap: 30px;
+        text-align: center;
+        cursor: pointer;
+        a {
+          font-size: 55px;
+          font-weight: 400;
+          text-transform: initial;
+          color: var(--white-text-color);
+          display: block;
+          &:hover {
+            color: var(--accent);
+          }
+          :active {
+            color: var(--accent);
+          }
+        }
+      }
+    }
+  }
+  .container .exp-list {
+    gap: 23px 23px;
+  }
+  .test-title {
+    font-size: 40px;
+  }
+  .test-descr {
+    font-size: 18px;
+  }
+  .faq {
+    width: 800px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .header {
+    .header__nav {
+      padding: 0 15px;
+    }
+    .header__title {
+      font-size: 70px;
+      padding-top: 34vh;
+    }
+    .header__subtitle {
+      font-size: 65px;
+    }
+    .header__descr {
+      max-width: 965px;
+      margin: 98px auto 0;
+    }
+  } 
+  .motivation-descr p {
+    font-size: 16px;
+  }
+  .club-wrapper {
+    padding-right: 20px;
+  }
+  .exp-item {
+    max-width: 430px;
+  }
+  .exp-item-wrapper div {
+    font-size: 18px;
+  }
+
+}
+
+@media (max-width: 1150px) {
+  .trainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 1120px;
+  }
+  .trainer-header {
+    margin-top: -30px;
+  }
+  .trainer__image {
+    display: none;
+  }
+  .trainer__image-mobile {
+    display: block;
+  }
+  .trainer__image::before {
+    display: none;
+  }
+  .trainer-small-description {
+    margin-top: 270px;
+    margin-left: 3px;
+  }
+  .trainer-description-list {
+    margin-top: 210px;
+  }
+}
+
+@media (max-width: 959px) {
+  .header {
+    .header__title {
+      font-size: 45px;
+    }
+    .header__subtitle {
+      font-size: 40px;
+    }
+    .header__descr {
+      font-size: 15px;
+      line-height: 23px;
+      max-width: 430px;
+      margin: 32px auto;
+    }
+    .price-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .price-btn-all {
+      width: 345px;
+    }
+  } 
+  .course-all {
+    margin-left: 20px;
+  }
+  .course-link {
+    padding: 10px 20px;
+  }
+ 
+  .faq {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 0 20px;
+  }
+  .club {
+    h2 {
+      font-size: 48px;
+    }
+    p {
+      font-size: 19px;
+    }
+  }
+  .exp {
+    padding-left: 20px;
+  }
+  .test-btn__wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .container-wrapper {
+    padding-right: 0px;
+  }
+  .match-wrapper {
+    justify-content: center;
+  }
+  .match-item {
+    width: 88%;
+  }
+  .trainer-header {
+    margin-left: 20px;
+  }
+  .trainer-description-list {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .test {
+    background-attachment: scroll; /* Отключаем fixed */
+  }
+  .motivation__marquee {
+    animation: motivation__marquee 15s linear infinite;
+  }
+}
+
+@media (max-width: 690px) {
+  .course-name {
+    position: absolute;
+    top: 10px;
+  }
+  .course-new {
+    position: absolute;
+    bottom: 20px;
+  }
+  .course-more {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    opacity: 1;
+  }
+  .course-arrow {
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+  }
+  .course-link {
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .price-btn-get-fixed {
+    display: flex;
+  }
+  .header {
+    .header__nav {
+      .nav {
+        ul {
+          a {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+  }
+  .motivation-descr {
+    left: 20px;
+    p {
+      font-size: 14px;
+    }
+  }
+  .exp {
+    h3 {
+      font-size: 30px;
+      padding-top: 80px;
+      margin-bottom: 85px;
+    }
+  }
+ 
+  .exp-item-wrapper div {
+    font-size: 13px;
+    padding: 10px 0px;
+  }
+  .exp-item-wrapper span {
+    margin: auto 15px;
+  }
+  .exp-descr {
+    font-size: 13px;
+  }
+  .exp-list {
+    gap: 80px 0px;
+  }
+  .exp-item {
+    max-width: 350px;
+  }
+  .test-title {
+    font-size: 28px;
+    line-height: 26px;
+    padding-bottom: 20px;
+  }
+  .test-descr {
+    font-size: 17px;
+    line-height: 26px;
+  }
+  .match {
+    padding: 50px 0;
+  }
+  .match-item,.no-border {
+    min-height: 100px;
+  }
+  .match-title {
+    line-height: 43px;
+    font-size: 23px;
+  }
+  .match-item__title {
+    font-size: 14px;
+  }
+  .match-item__descr {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .trainer-name {
+    font-size: 40px;
+  }
+  .trainer-name div {
+    font-size: 16px;
+  }
+  .trainer-small-description {
+    font-size: 16px;
+    p {
+      font-size: 14px;
+    }
+  }
+  .trainer-description-list {
+    font-size: 14px;
+  }
+  .question h3, .answer p, .answer ul{
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 530px) {
+  .header {
+    .header__title {
+      font-size: 37px;
+    }
+    .header__subtitle {
+      font-size: 30px;
+    }
+    .header__descr {
+      font-size: 13px;
+      padding: 0 10px;
+    }
+  }
+  .club {
+    h2 {
+      font-size: 44px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-item {
+    font-size: 30px;
+  }
+  .course-all {
+    font-size: 25px;
+  }
+  .course-name {
+    font-size: 16px;
+  }
+  .course-new {
+    font-size: 14px;
+  }
+  .course-more {
+    font-size: 12px;
+  }
+  .club {
+    h2 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 65px;
+      max-width: 345px;
+      padding-top: 17px;
+      line-height: 26px;
+    }
+    .club-wrapper {
+      padding-right: 20px;
+      padding-top: 80px;
+    }
+  }
+  .exp-item {
+    max-width: 300px;
+  }
+  .trainer {
+    min-height: 1190px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    .header__title {
+      font-size: 30px;
+    }
+    .header__subtitle {
+      font-size: 25px;
+    }
+    .header__descr {
+      font-size: 12px;
+    }
+    .price-courses {
+      font-size: 15px;
+    }
+    .price-btn-get, .price-btn-all {
+      width: clamp(13.75rem, -0.625rem + 95.83vw, 20.938rem);
+    } 
+  }
+  .club h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-height: 1000px) {
+  .header {
+    .header__title {
+      padding-top: 36vh;
+    }
+  }
+}
+
+@media (max-height: 810px) {
+  .header {
+    .header__title {
+      padding-top: 38vh;
+    }
+  }
+}
